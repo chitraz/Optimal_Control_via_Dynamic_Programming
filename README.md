@@ -1,8 +1,7 @@
 # Optimal Control via Dynamic Programming
 
-A C++ implementation that solves the recursive Bellman quation for constrained, non-linear, discrete-time, finite-horizon optimal control problems of the form:
+A C++ implementation that solves the recursive Bellman equation for discrete optimal control problems of the form:
 <br />
-
 
 $$\begin{align}
 &\text{minimise} \ J_{0,N} = h(x[N])  + \sum_{k=0}^{N-1} g(x[k], u[k]) \\
@@ -22,13 +21,11 @@ where:
 - $g(.)$ is the running cost function
 - $a(.)$ is the state dynamics
 
-Time is discretized into $N$ equally spaced time increments between $t=0$ to final time $t=T$. <br />
-  
-Both state and control values are discrete and bounded. And  <br />
+Time is discretized into $N$ equally spaced time increments between $t=0$ to final time $t=T$. Both state and control values are discrete and bounded. <br />
 
 
 <br />
-The recurrence equation:  <br /> <br />
+The recurrence relation is given by:  <br /> <br />
 
 $$
 J_{N-K,N}^{ * }(x[N-K]) = \min_{u[N-K]} \Bigl[ g(x[N-K], u[N-K]) + J_{N-(K-1), N}^{ * }(a(x[N-K], u[N-K]) ) \Big] \\ \\
