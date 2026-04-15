@@ -1,4 +1,4 @@
-# Optimal Control via Dynamic Programing
+# Optimal Control via Dynamic Programming
 
 A C++ implementation that solves the recursive Bellman quation for constrained, non-linear, discrete-time, finite-horizon optimal control problems of the form:
 <br />
