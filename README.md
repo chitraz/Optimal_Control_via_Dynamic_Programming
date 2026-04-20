@@ -21,8 +21,7 @@ where:
 - $g(.)$ is the running cost function
 - $a(.)$ is the state dynamics
 
-Time is discretized into $N$ equally spaced time increments between $t=0$ to final time $t=T$. Both state and control values are discrete and bounded. <br />
-
+Time is discretized into $N$ equally spaced time increments between $t=0$ to final time $t=T$. State/control values are uniformly discretized into $x_{ql}$ / $u_{ql}$ levels between an upper $x_{ub}$ / $u_{ub}$ and lower $x_{ul}$ / $u_{ul}$ bounds. <br />
 
 <br />
 The recurrence relation is given by:  <br /> <br />
