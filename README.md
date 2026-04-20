@@ -14,7 +14,7 @@ $$\begin{align}
 \end{align}$$
 
 where:
-- $J_{0, N}$ is the cost functional
+- $J_{0, N}$ is the cost functional from stage $O$ to $N$
 - $x$ is the $n$-d state variable
 - $u$ is the $m$-d control variable
 - $h(.)$ is the terminal cost function
@@ -38,7 +38,7 @@ for $K = 1, 2, 3, ..., N$ with inital stage ($K=0$) given by $J_{N,N}^{ * }(x[N]
 
 
 ```C++
-ProblemDefination::ProblemDefination()
+ProblemDefinition::ProblemDefinition()
 {
     n = 2;
     x_ql = 100;
@@ -61,7 +61,7 @@ ProblemDefination::ProblemDefination()
     delta_time = (double)T / (double)N;
 }
 
-std::vector<double> ProblemDefination::next_state_equation(std::vector<double> current_x, std::vector<double> current_u)
+std::vector<double> ProblemDefinition::next_state_equation(std::vector<double> current_x, std::vector<double> current_u)
 {
     std::vector<double> next_x; 
 
@@ -71,7 +71,7 @@ std::vector<double> ProblemDefination::next_state_equation(std::vector<double> c
     return next_x;
 }
 
-double ProblemDefination::cost_equation(std::vector<double> current_x, std::vector<double> current_u, bool terminal)
+double ProblemDefinition::cost_equation(std::vector<double> current_x, std::vector<double> current_u, bool terminal)
 {
    	if (terminal) 
     {
@@ -80,4 +80,7 @@ double ProblemDefination::cost_equation(std::vector<double> current_x, std::vect
 	return (pow(current_x[0], 2.0) + pow(current_x[1], 2.0) + pow(current_u[0], 2.0)) * delta_time;   // running cost
 }
 ```
+
+<img width="1271" height="670" alt="result" src="https://github.com/user-attachments/assets/c61897d9-d05f-4b0a-8c61-25df60048d31" />
+
 
